@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <script>
+        function multiply(n){
+            let x = n;
+            return function(m){ return x * m;};
+        }
+        
+        const fn1 = multiply(5);
+        const result1 = fn1(6); // 30
+        console.log(result1); // 30
+        
+        const fn2= multiply(4);
+        const result2 = fn2(6); // 24
+        console.log(result2); // 24
+        
+    </script>
+</body>
+</html>
