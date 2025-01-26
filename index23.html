@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <script>
+        console.log(
+            ((x,y) => (
+                ((proc2) =>(
+                    ((proc1)=>proc1(5,30))((x,y) => [x, proc2(), y])
+                ))(()=>x + y)
+            ))(10, 15)
+        );      // [5, 25, 30]
+                
+    </script>
+</body>
+</html>
