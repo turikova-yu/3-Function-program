@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <script>
+        function print(){
+            console.log("Доброе утро");
+            print = function(){
+            console.log("Добрый день");
+            }
+        }
+
+        // присвоение ссылки на функцию до переопределения
+        const printMessage = print;
+        print(); // Доброе утро
+        print(); // Добрый день
+        printMessage(); // Доброе утро
+        printMessage(); // Доброе утро
+
+        console.log("А теперь вторая функция");
+        
+        function print1(){
+            console.log("Доброе утро");
+            print1 = function(){
+            console.log("Добрый день");
+            }
+        }
+        print1(); // Доброе утро
+        print1(); // Добрый день
+        const printMessage1 = print1;
+        printMessage1(); // Добрый день
+        printMessage1(); // Добрый день
+
+
+    </script>
+</body>
+</html>
